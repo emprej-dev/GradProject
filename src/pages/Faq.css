@@ -1,0 +1,141 @@
+/* 전체 감싸는 영역 */
+.faq-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  min-height: 100vh;
+  font-family: "Pretendard", sans-serif;
+}
+
+/* 상단 초록색 배너 */
+.faq-banner {
+  width: 100%;
+  background-color: #2ECC71;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+/* 배너 안 텍스트 */
+.faq-banner-text h1 {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.faq-banner-text p {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* 뒤로가기 버튼 */
+.back-btn {
+  position: absolute;
+  top: 25px;
+  left: 40px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.back-btn:hover {
+  transform: translateX(-3px);
+}
+
+/* 검색창 */
+.faq-search {
+  margin: 25px 15px;
+  margin-left:auto;
+  margin-right: 390px;
+  width: 80%;
+  max-width: 250px;
+}
+
+.faq-search input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* FAQ 테이블 */
+.faq-table {
+  width: 85%;
+  max-width: 800px;
+  border-collapse: collapse;
+  margin-bottom: 50px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #f3f3f3;
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 15px;
+}
+
+/* 번호 열 */
+.faq-th-number {
+  width: 60px;
+
+}
+
+/* 제목 열 */
+.faq-th-title {
+  text-align: center;
+}
+
+/* 질문 행 */
+.faq-question-row {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.faq-question-row:hover {
+  background-color: #f9f9f9;
+}
+
+.faq-question-row.active {
+  background-color: #f3fef0;
+}
+
+/* 답변 행 */
+.faq-answer-row {
+  background-color: #fcfdfc;
+}
+
+.faq-a {
+  text-align: center;
+  color: #2ECC71;
+  font-weight: 700;
+}
+
+.faq-answer {
+  text-align: left;
+  padding: 14px;
+  line-height: 1.5;
+}
+
+.faq-number{
+  text-align: center;
+}

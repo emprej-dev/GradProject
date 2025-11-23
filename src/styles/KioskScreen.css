@@ -1,0 +1,325 @@
+/* 전체 컨테이너 */
+.kiosk-container {
+padding: 20px;
+max-width: 1200px;
+margin: 0 auto;
+font-family: Arial, sans-serif;
+position: relative;
+}
+
+/* 상단 버튼 */
+.top-buttons {
+display: flex;
+justify-content: flex-end;
+gap: 10px;
+margin-bottom: 10px;
+}
+
+.top-buttons button {
+padding: 6px 12px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-size: 16px;
+background: #f0f0f0;
+transition: 0.2s;
+}
+
+.top-buttons button:hover {
+background: #2ecc71;
+color: white;
+}
+
+/* 타이틀 */
+.kiosk-title {
+color: #2ecc71;
+text-align: center;
+font-size: 28px;
+margin-bottom: 20px;
+}
+
+/* 카테고리 버튼 */
+.category-buttons {
+display: flex;
+justify-content: center;
+gap: 12px;
+margin-bottom: 20px;
+}
+
+.category-buttons button {
+padding: 8px 16px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+background: #f0f0f0;
+font-weight: bold;
+transition: 0.2s;
+}
+
+.category-buttons button.active,
+.category-buttons button:hover {
+background: #2ecc71;
+color: white;
+}
+
+/* 메뉴 카드 리스트 */
+.menu-list {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 16px;
+margin-top: 20px;
+}
+
+/* 메뉴 카드 */
+.menu-item {
+width: 140px;
+height: 180px;
+padding: 10px;
+border-radius: 12px;
+background: #efefef;
+border: 3px solid #2ecc71;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+cursor: pointer;
+transition: 0.2s;
+}
+
+.menu-item:hover {
+transform: scale(1.05);
+box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+.menu-item img {
+width: 100px;
+height: 100px;
+object-fit: cover;
+border-radius: 10px;
+margin-bottom: 8px;
+}
+
+.menu-name {
+font-size: 15px;
+font-weight: bold;
+white-space: nowrap;
+text-align: center;
+}
+
+.menu-price {
+font-size: 14px;
+color: #252525;
+margin-top: 3px;
+}
+
+/* 장바구니 */
+.cart {
+margin-top: 30px;
+position: relative;
+border-top: 2px solid #2ecc71;
+padding-top: 10px;
+}
+
+.cart ul {
+list-style: none;
+padding: 0;
+}
+
+.cart li {
+display: flex;
+justify-content: space-between;
+margin-bottom: 8px;
+}
+
+.cart li button {
+background: #2ecc71;
+border: none;
+border-radius: 6px;
+color: white;
+cursor: pointer;
+padding: 2px 6px;
+font-size: 12px;
+}
+
+/* 장바구니 페이지네이션 */
+.pagination-buttons {
+display: flex;
+justify-content: center;
+gap: 8px;
+margin-top: 8px;
+}
+
+.pagination-buttons button {
+padding: 4px 10px;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+background: #f0f0f0;
+}
+
+.pagination-buttons button:disabled {
+background: #ddd;
+cursor: default;
+}
+
+/* 결제 버튼 */
+.pay-button {
+display: block;
+margin-top: 10px;
+padding: 8px 16px;
+border: none;
+border-radius: 8px;
+background: #2ecc71;
+cursor: pointer;
+font-weight: bold;
+color: white;
+}
+
+/* 모달 배경 */
+.modal {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 100;
+}
+
+/* 모달 콘텐츠 */
+.modal-content {
+background: #fff;
+padding: 20px;
+border-radius: 12px;
+text-align: center;
+max-width: 400px;
+width: 90%;
+}
+
+.modal-content button {
+margin-top: 10px;
+padding: 6px 12px;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+transition: 0.2s;
+}
+
+.modal-content button:hover {
+opacity: 0.8;
+}
+
+.card-btn {
+background: #4caf50;
+color: white;
+margin-right: 8px;
+}
+
+.kakao-btn {
+background: #ffeb3b;
+color: #333;
+}
+
+/* 옵션 모달 버튼 선택 상태 */
+.option-group {
+margin: 10px 0;
+}
+
+.option-group button {
+padding: 6px 12px;
+margin: 0 6px;
+border: 2px solid #2ecc71;
+border-radius: 6px;
+cursor: pointer;
+transition: 0.2s;
+}
+
+.option-group button.selected {
+background: #2ecc71;
+color: white;
+}
+
+/* 정보 안내 박스 */
+.info-box {
+width: 100%;
+max-width: 600px;
+height: 180px;
+margin: 20px auto;
+padding: 20px;
+background: white;
+border-radius: 10px;
+border: 2px solid #2ecc71;
+font-size: 18px;
+line-height: 1.4;
+overflow-y: auto;
+position: relative;
+z-index: 30;
+}
+
+/* 버튼 영역 */
+.info-buttons {
+display: flex;
+justify-content: center;
+gap: 12px;
+margin-top: 10px;
+}
+
+/* 다음/닫기 버튼 */
+.info-btn {
+padding: 8px 16px;
+background: #2ecc71;
+border: none;
+border-radius: 8px;
+color: rgb(18, 18, 18);
+cursor: pointer;
+font-size: 16px;
+transition: 0.2s;
+}
+
+.info-btn:hover {
+background: #27ae60;
+color: white;
+}
+
+/* 하이라이트 효과 */
+.highlight {
+border: 3px solid #e74c3c !important;
+box-shadow: 0 0 20px rgba(231,76,60,0.7);
+animation: blink 1s infinite alternate;
+position: relative;
+z-index: 20;
+}
+
+@keyframes blink {
+0% { box-shadow: 0 0 10px rgba(231,76,60,0.5); }
+100% { box-shadow: 0 0 20px rgba(231,76,60,1); }
+}
+
+/* 화살표 표시 */
+.arrow {
+position: absolute;
+width: 50px;
+height: 50px;
+z-index: 25;
+}
+
+.arrow-menu {
+top: -60px;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.arrow-cart {
+top: -60px;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.arrow-pay {
+top: -60px;
+left: 50%;
+transform: translateX(-50%);
+}
