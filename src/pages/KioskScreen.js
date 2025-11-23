@@ -74,7 +74,8 @@ function KioskScreen() {
 
   const handleCardPayment = async () => {
     try {
-      await axios.post('http://localhost:5000/api/orders', { items: selectedItems });
+      //await axios.post('http://localhost:5000/api/orders', { items: selectedItems });
+      await axios.post('https://gradproject-backend.onrender.com/api/orders', { items: selectedItems });
       alert('💳 카드 결제 완료!');
       setShowPaymentOptions(false);
       setShowPaymentModal(true);
@@ -86,7 +87,8 @@ function KioskScreen() {
 
   const handleKakaoPay = async () => {
     try {
-      await axios.post('http://localhost:5000/api/orders', { items: selectedItems });
+      //await axios.post('http://localhost:5000/api/orders', { items: selectedItems });
+      await axios.post('https://gradproject-backend.onrender.com/api/orders', { items: selectedItems });
       alert('🟡 카카오페이 결제 완료!');
       setShowPaymentOptions(false);
       setShowPaymentModal(true);
